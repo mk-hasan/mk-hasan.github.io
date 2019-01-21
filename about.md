@@ -4,12 +4,13 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Hallo! i am M.K Hasan, Currently doing my Masters in Computer Science at Technical University Berlin. I am interested about Machine Learning, Deep learning and Big Data area. 
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+I love to play games when i am free. I love to eat and chill with my friends.
 
 ### Contact me
+You can contact me if needed by the following email:
 
-[email@domain.com](mailto:email@domain.com)
+[hasan.alive@gmail.com](mailto:hasan.alive@gmail.com)
