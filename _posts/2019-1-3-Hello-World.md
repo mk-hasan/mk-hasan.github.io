@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating Kubernets Cluster with Stack of Raspberry Pi!
+title: Deploying YOLO Object Detection Model With Apache Flink in Kubernets Cluster Using Raspberry PI!
 ---
 
 Coming soon...
