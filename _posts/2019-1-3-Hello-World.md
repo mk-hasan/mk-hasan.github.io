@@ -58,9 +58,11 @@ Now you will see the message that node has joined to master node in the cluster 
 Now if run the follwing command in kubernets master node, you will be able to see all the nodes in the cluster.
 >kubectl get nodes
 
+![Nodes](/images/nodes.jpg)
+
 You can algo get all the pods using following command..
 >kubectl get pods
-
+![Pods](/images/pods.jpg)
 If you want to see the log or want to see the details of pods,
 >kubectl log "pod-name"
 >kubectl describe pod "pod-name"
@@ -864,6 +866,7 @@ Then you can access the flink UI from browser. For that, you need to open up the
 and browse to the follwink link. 
 >http://localhost:8001/api/v1/namespaces/default/services/flink-jobmanager:ui/proxy
 
+![Flink UI](/images/ui.jpg)
 
 Then you can submit the job using flink webUI. just upload the object detection jar file and run the jar file using necessary parameters or without any parameter. You can check the log file of the taskmanager to see the output.
 
