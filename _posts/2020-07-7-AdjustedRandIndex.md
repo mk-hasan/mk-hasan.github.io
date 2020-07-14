@@ -51,11 +51,41 @@ The simple term of an index with a constant expected value is
 which is boudnded by 1, and takes the value 0 when the index equals to its expected value.
 With the consideration fo generalized hypergeometric model, it can be shown as:
 
-![ARi Equation](/images/ari-eq.PNG "Adjusted Rand Index Equation")
+![ARI Concept](/images/ari-r-eq.PNG "Adjusted Rand Index Formula")
 
 The term $(n/2)$ is called binomial coefficients and it was previously $a+d$. Finally, the adjusted rand index can be written as:
 
+![ARi Equation](/images/ari-eq.PNG "Adjusted Rand Index Equation")
 
+Lets consider a real exaple to break the calcualtion down. We will take some synthetic data for the calculation:
+
+```python 
+
+>>> x = [1 2 3 3 2 1 1 3 3 1 2 2]
+
+>>> y = [3 2 3 2 2 1 1 2 3 1 3 1]
+
+```
+From the above data we can see there are three different clusters. Each value represents each cluster and the index is really important to calculate ARI.
+
+Lets find out the Contengincy Table from the above clustered data.
+
+![ARi Equation](/images/ctablereal.PNG "Contingency Rable")
+
+
+The ARI formula is basically consists of three parts:
+
+![ARi Equation](/images/ari-3-parts.PNG "ARi 3 parts")
+
+Here, means the sum and i,j refers to th row number and column number respectively. a refers to the sum of row value and b refers to the sum of column value. Lets calculate the three parts of ARI from the above data.
+
+![ARi ctable calcualtion](/images/ari-3-parts-de.PNG "ARI CTable calculation breakdown")
+
+
+Finally, we can get the final ARI value of the above two partions data.
+
+
+![ARi Result](/images/ari-result.PNG "ARI Result")
 
 
 
