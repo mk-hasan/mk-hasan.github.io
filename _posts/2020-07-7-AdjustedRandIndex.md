@@ -42,6 +42,7 @@ Here, R ranges from 0(no pair classified in the same way under both clusterings)
 Let U and V are two random partitions with multiple cluster inside. Let nij be the numer of objects that are in both cluster ui and vj. Let ni adn nj be the number of objects or elements in cluster ui and cluster vi respectively. The notations are illustrated in the following table.
 
 
+![ARI CTable](/images/ari-math.PNG "Adjusted Rand Index Contingency Table")
 
 This table is called Contingency Table. You have to first create this contingency table out of two paritions. Then this table will help to calculate the ARI coeffiecients. 
 
@@ -50,7 +51,7 @@ The simple term of an index with a constant expected value is
 which is boudnded by 1, and takes the value 0 when the index equals to its expected value.
 With the consideration fo generalized hypergeometric model, it can be shown as:
 
-![ARi Equation](/images/ari-eq.PNG "Logo Title Text 1")
+![ARi Equation](/images/ari-eq.PNG "Adjusted Rand Index Equation")
 
 The term (n/2) is called binomial coefficients and it was previoulst a+d. Finally, the adjusted rand index can be written as:
 
