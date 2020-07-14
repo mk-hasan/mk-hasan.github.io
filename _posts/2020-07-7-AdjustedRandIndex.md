@@ -65,11 +65,43 @@ Now, lets go trought the code and example with much simpler way.
 
 - It is very easy to use ARI with Python. Thanks to the Sci-kit learn , which has almost all of the machine learning algorithm. Let's look at the simple example about how to use ARI module from scikit-learn using python. 
 
+### Python 
+
+Perfectly matching labelings have a score of 1 even
+
+python ```
+>>> from sklearn.metrics.cluster import adjusted_rand_score
+>>> adjusted_rand_score([0, 0, 1, 1], [0, 0, 1, 1])
+1.0
+>>> adjusted_rand_score([0, 0, 1, 1], [1, 1, 0, 0])
+1.0
+```
+
+Labelings that assign all classes members to the same clusters are complete be not always pure, hence penalized:
+
+python ```
+>>> adjusted_rand_score([0, 0, 1, 2], [0, 0, 1, 1])
+0.57...
+```
+
+ARI is symmetric, so labelings that have pure clusters with members coming from the same classes but unnecessary splits are penalized:
+
+python ```
+>>> adjusted_rand_score([0, 0, 1, 1], [0, 0, 1, 2])
+0.57...
+```
+If classes members are completely split across different clusters, the assignment is totally incomplete, hence the ARI is very low:
+
+python ```
+>>> adjusted_rand_score([0, 0, 0, 0], [0, 1, 2, 3])
+0.0
+```
 
 
 
+The above explanation and exale with python is so easy to use that sometimes you may forget how to code.
 
-But for understanding the implementation from coding point of view, i am going to implement this with GoLang. With GoLang code we can easily understand how the ARI should be implemented in details with any OOP language. 
+But for understanding the implementation from OOP coding point of view, i am going to implement this with GoLang. With GoLang code we can easily understand how the ARI should be implemented in details with any OOP language. 
 
 We need to have three class for the implementation. 
 
