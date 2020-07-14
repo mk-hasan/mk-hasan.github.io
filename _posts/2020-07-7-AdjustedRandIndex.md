@@ -63,6 +63,11 @@ Now, lets go trought the code and example with much simpler way.
 - R (package)
 
 
+- It is very easy to use ARI with Python. Thanks to the Sci-kit learn , which has almost all of the machine learning algorithm. Let's look at the simple example about how to use ARI module from scikit-learn using python. 
+
+
+
+
 
 But for understanding the implementation from coding point of view, i am going to implement this with GoLang. With GoLang code we can easily understand how the ARI should be implemented in details with any OOP language. 
 
@@ -71,3 +76,165 @@ We need to have three class for the implementation.
  - One for the interface
  - One for the Contingency Table creation
  - One for the calculating ARI coefficients
+
+I always use interface for such kind of things like any distance metrics or validation metrics. As there are multiple metrics available for this kind of task, having interface is helpful to implement multiple metrics. 
+
+### Interface: 
+
+```
+package graph
+
+/**
+ * An abstract interface to measure the clustering performance
+ * M.K Hasan
+ * hasan.alive@gmail.com
+ */
+
+var ValidationFunctionRegistry = map[string]func() ValidationComputation{}
+
+type ValidationComputation interface {
+	Measure(y1, y2 []int) int
+	GetName() string
+}
+
+type ValidationFunction struct {
+	Computation ValidationComputation
+}
+
+func (vf *ValidationFunction) Measure(y1, y2 []int) int {
+	return vf.Computation.Measure(y1, y2)
+}
+
+func (vf *ValidationFunction) GetName() string {
+	return vf.Computation.GetName()
+}
+
+
+```
+
+### Contingency Table
+
+```
+package validation
+
+import (
+	"fmt"
+)
+
+/**
+ * The contigency table of the two cluster
+ * M.k Hasan
+ * hasan.alive@gmail.com
+ */
+type CTableAttribute struct {
+	n                                  int /* total number of observation */
+	NumberOfCluster1, NumberOfCluster2 int /** Total number of cluster in first and second cluster **/
+	/** two dimensional contingency table */
+}
+
+/** creating the contingency table **/
+func (e *CTableAttribute) ContingencyTable(y1, y2 []int) ([][]int, []int, []int) {
+
+	var table [][]int
+
+	if len(y1) != len(y2) {
+		fmt.Errorf("length of the two cluster elements should be equal")
+	}
+
+	for i := 0; i < e.NumberOfCluster1; i++ {
+		for j := 0; j < e.NumberOfCluster2; j++ {
+			nij := 0
+			for k := 0; k < e.n; k++ {
+				if i == y1[k] && j == y2[k] {
+					nij = nij + 1
+				}
+			}
+			table[i][j] = nij
+		}
+
+	}
+	var a []int //rowsum
+	var b []int //columnsum
+
+	for i := 0; i < e.NumberOfCluster1; i++ {
+		for j := 0; j < e.NumberOfCluster2; j++ {
+			a[i] = a[i] + table[i][j]
+			b[i] = b[i] + table[i][j]
+		}
+	}
+	return table, a, b
+}
+
+```
+
+### Calculate functions
+
+```
+package validation
+
+import (
+	"gonum.org/v1/gonum/stat/combin"
+	g "ki/graph"
+)
+
+func init() {
+	g.ValidationFunctionRegistry["ARI"] = func() g.ValidationComputation {
+		return &ARI{}
+	}
+}
+
+type ARI struct {
+	CTable CTableAttribute
+}
+
+func (e *ARI) Measure(y1, y2 []int) int {
+	return e.CalculateRand1(y1, y2)
+}
+
+/** Calculate the adjusted Rand Index **/
+
+func (e *ARI) CalculateRand1(y1, y2 []int) int {
+	var rand1 int
+	count, a, b := e.CTable.ContingencyTable(y1, y2)
+	for i := 0; i < e.CTable.NumberOfCluster1; i++ {
+		for j := 0; j < e.CTable.NumberOfCluster2; j++ {
+			if count[i][j] >= 2 {
+				rand1 += combin.Binomial(count[i][j], 2)
+			}
+		}
+	}
+	rand2a := 0
+	for i := 0; i < e.CTable.NumberOfCluster1; i++ {
+		if a[i] >= 2 {
+			rand2a += combin.Binomial(a[i], 2)
+		}
+	}
+
+	rand2b := 0
+	for j := 0; j < e.CTable.NumberOfCluster2; j++ {
+		if b[j] >= 2 {
+			rand2b += combin.Binomial(b[j], 2)
+		}
+	}
+
+	rand3 := rand2a * rand2b
+	rand3 = rand3 / combin.Binomial(e.CTable.n, 2)
+	randN := rand1 - rand3
+
+	// D
+	rand4 := (rand2a + rand2b) / 2
+	randD := rand4 - rand3
+
+	rand := randN / randD
+	return rand
+
+}
+
+func (e *ARI) GetName() string {
+	return "ARI"
+}
+
+
+```
+
+
