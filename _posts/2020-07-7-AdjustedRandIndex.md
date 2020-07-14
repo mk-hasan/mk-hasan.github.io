@@ -32,9 +32,9 @@ tags:
 ### Rand Index:
  Rand Index was motivated by the idea of comparing one classifcation result to an another classification result. The naive theory for  measuring the performance of a classification would be calculating the correctly classified items to all items. For RI, the above mention performance measre theory was extened to the comparing two cluster. Here, instead of counting single elemsnts, RI counts the correctly classied pairs of items. Hence, we can have the definition of Rand Index from the mathematical point of view as:
 
- R = a+d/a+b+c+d
+ $R = a+d/a+b+c+d$
 
-Here, R ranges from 0(no pair classified in the same way under both clusterings) t0 1(similar clustering). The term a and b can be seen as agreements and b,c as disagreements. 
+Here, R ranges from 0(no pair classified in the same way under both clusterings) to 1(similar clustering). The term a and b can be seen as agreements and b,c as disagreements. 
 
 ### ARI:
  A major problem with the RI is that the expected value of Rand Index of two random cluster or partition does not take a constant value. To solve the problem , Adjusted Rand Index was introduced where the generalized hypergeometric distribution considered as the model of randomenss.
@@ -53,7 +53,7 @@ With the consideration fo generalized hypergeometric model, it can be shown as:
 
 ![ARi Equation](/images/ari-eq.PNG "Adjusted Rand Index Equation")
 
-The term (n/2) is called binomial coefficients and it was previoulst a+d. Finally, the adjusted rand index can be written as:
+The term $(n/2)$ is called binomial coefficients and it was previously $a+d$. Finally, the adjusted rand index can be written as:
 
 
 
