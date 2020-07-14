@@ -42,7 +42,7 @@ Oct 2018 – Present | Berlin, DE
 
 ## Freie University Berlin
 &nbsp;
-** Research Intern **
+**Research Intern**
 Oct 2018 – Present | Berlin, DE
 &nbsp;
 &nbsp;
@@ -67,7 +67,7 @@ Feb 2017 – Dec 2017 | Berlin, DE
   
 Skills
 ======
-&nbsp;
+
 ### PROGRAMMING
 * Java,Python,
 * Scala & C# 
@@ -75,7 +75,7 @@ Skills
 * JavaScript, HTML, andCSS
 
 ### SYSTEM&FRAMEWORK
-&nbsp;
+
 * ETL
 * ApacheFlink&Spark
 * ApacheAirflow
@@ -90,7 +90,7 @@ Skills
 * Tensorflow ,Keras & Deeplearning4j
 
 ### MACHINE LEARNING & DEEPLEARNING
-&nbsp;
+
 * Statistical modelling 
 * Regression 
 * Support Vector Machines 
