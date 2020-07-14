@@ -69,7 +69,7 @@ Now, lets go trought the code and example with much simpler way.
 
 Perfectly matching labelings have a score of 1 even
 
-python ```
+```python 
 >>> from sklearn.metrics.cluster import adjusted_rand_score
 >>> adjusted_rand_score([0, 0, 1, 1], [0, 0, 1, 1])
 1.0
@@ -79,20 +79,20 @@ python ```
 
 Labelings that assign all classes members to the same clusters are complete be not always pure, hence penalized:
 
-python ```
+```python 
 >>> adjusted_rand_score([0, 0, 1, 2], [0, 0, 1, 1])
 0.57...
 ```
 
 ARI is symmetric, so labelings that have pure clusters with members coming from the same classes but unnecessary splits are penalized:
 
-python ```
+```python 
 >>> adjusted_rand_score([0, 0, 1, 1], [0, 0, 1, 2])
 0.57...
 ```
 If classes members are completely split across different clusters, the assignment is totally incomplete, hence the ARI is very low:
 
-python ```
+```python 
 >>> adjusted_rand_score([0, 0, 0, 0], [0, 1, 2, 3])
 0.0
 ```
