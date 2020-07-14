@@ -39,7 +39,7 @@ Here, R ranges from 0(no pair classified in the same way under both clusterings)
 ### ARI:
  A major problem with the RI is that the expected value of Rand Index of two random cluster or partition does not take a constant value. To solve the problem , Adjusted Rand Index was introduced where the generalized hypergeometric distribution considered as the model of randomenss.
 
-Let U and V are two random partitions with multiple cluster inside. Let $n_ij$ be the numer of objects that are in both cluster $u_i$ and $v_j$. Let ni adn $n_j$ be the number of objects or elements in cluster $u_i$ and cluster $v_i$ respectively. The notations are illustrated in the following table.
+Let U and V are two random partitions with multiple cluster inside. Let $n_{ij}$ be the numer of objects that are in both cluster $u_i$ and $v_j$. Let ni adn $n_j$ be the number of objects or elements in cluster $u_i$ and cluster $v_i$ respectively. The notations are illustrated in the following table.
 
 
 ![ARI CTable](/images/ari-math.PNG "Adjusted Rand Index Contingency Table")
@@ -66,7 +66,7 @@ Lets consider a real exaple to break the calcualtion down. We will take some syn
 >>> y = [3 2 3 2 2 1 1 2 3 1 3 1]
 
 ```
-From the above data we can see there are three different clusters. Each value represents each cluster and the index is really important to calculate ARI.
+From the above data we can see there are three different clusters in each partitions. Each value represents each cluster and the index is really important to calculate ARI. We just need to count the co-occurrences to build the contingency table. $n_{11}$  would be the number of times an element occurs in cluster 1 of X and cluster 1 of Y; this occurs three times: the sixth, seventh, and tenth elements. 
 
 Lets find out the Contengincy Table from the above clustered data.
 
