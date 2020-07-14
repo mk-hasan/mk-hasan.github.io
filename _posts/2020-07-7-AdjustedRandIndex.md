@@ -1,7 +1,13 @@
 ---
-layout: post
-title: What is Adjusted Rand Index and How it works! 
+title: ' What is Adjusted Rand Index and How it works! '
+date: 2020-04-14
+permalink: /posts/2020/04/blog-post-4/
+tags:
+  - Machine Learning
+  - Clustering
+  - Adjusted Rand Index
 ---
+
 
 
 > Adjusted Rand Index(ARI) is one of the widely used metrics for validating clustering performance

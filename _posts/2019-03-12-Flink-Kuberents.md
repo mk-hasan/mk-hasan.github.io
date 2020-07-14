@@ -1,7 +1,13 @@
 ---
-layout: post
-title: Deploying YOLO Object Detection Model With DeepLearning 4 Java & Apache Flink in Kubernets Cluster Using Raspberry PI!
+title: 'Deploying YOLO Object Detection Model With DeepLearning 4 Java & Apache Flink in Kubernets Cluster Using Raspberry PI!'
+date: 2019-10-14
+permalink: /posts/2019/10/blog-post-4/
+tags:
+  - Apache Flink
+  - Deep Learning
+  - Object Detection
 ---
+
 
 > I was trying to test how object detection model working on kuberenets cluster with apache flink. As i love to do everything in java rather than python, i wanted to give a shot for DeepLearning4j API. This API has been built for running various deep learning model on top of Java. it works pretty good. I set up a kubernets cluster to run the Apache Flink and deploy the YOLO model with flink configuration to see how it works. Let's move on to step by step process. 
 
