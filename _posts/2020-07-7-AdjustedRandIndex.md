@@ -77,7 +77,7 @@ The ARI formula is basically consists of three parts:
 
 ![ARi Equation](/images/ari-3-parts.PNG "ARi 3 parts")
 
-Here, means the sum and i,j refers to th row number and column number respectively. a refers to the sum of row value and b refers to the sum of column value. Lets calculate the three parts of ARI from the above data.
+Here, $\sum$ means the sum and i,j refers to th row number and column number respectively. a refers to the sum of row value and b refers to the sum of column value. Lets calculate the three parts of ARI from the above data.
 
 ![ARi ctable calcualtion](/images/ari-3-parts-de.PNG "ARI CTable calculation breakdown")
 
