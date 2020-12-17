@@ -18,7 +18,7 @@ tags:
 
 ## *Let's Talk about ARI in details....*
 
-# Waht can we learn from this article?
+# What can we learn from this article?
 
  - What is ARI?
  - Where to use ARI?
