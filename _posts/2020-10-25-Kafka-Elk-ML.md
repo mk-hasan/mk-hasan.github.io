@@ -60,7 +60,7 @@ The "volumes:" argument needs to set according the file path in docker container
 
 Logstash.conf file consists of several block:
 
-1. input block to get the data from specific service like kafaka.
+	*  input block to get the data from specific service like kafaka.
 
 ```
 input {
@@ -73,7 +73,7 @@ input {
 }
 ```
 
-2. filter block to filter the data 
+	*  filter block to filter the data 
 
 #### Filter Plugin. A filter plugin performs intermediary processing on an event.
 #### Ref Link - https://www.elastic.co/guide/en/logstash/current/filter-plugins.html
@@ -123,7 +123,7 @@ filter {
 }
 ```
 
-3. output block to send the data to elasticsearch
+	* output block to send the data to elasticsearch
 
 #### An output plugin sends event data to a particular destination. Outputs are the final stage in the event pipeline.
 #### Ref Link - https://www.elastic.co/guide/en/logstash/current/output-plugins.html
