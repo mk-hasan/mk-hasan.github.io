@@ -138,6 +138,7 @@ output {
 ```
 
 All of the endpoints like hostname and port should be configure according to your preference. 
+Github: https://github.com/mk-hasan/Filebeat-Kafka-ELK-Machine_Learning
 
 * Finally we can up the docker-compose.yml file which will trigger all the service running and the pipeline will start working. Then you can visit the elasticsearch dashboard with the corresponding hostname:port to see the data. 
 
