@@ -9,13 +9,12 @@ redirect_from:
 ---
 
 <h2>Hey 👋, I'm <a href="https://mk-hasan.github.io/">Mk Hasan</a></h2>
-<p>I'm currently a Data engineer at <strong><a href="https://www.oetkerdigital.com/">Oetker Digital GmbH</a></strong> and based in 🌁 Berlin. I am mostly working with various data related project inclduing building data platform to data warehouse.</p>
+<p>I'm currently a <strong>Lead Data Platform Engineer<strong> at <strong><a href="https://www.oetkerdigital.com/">Oetker Digital GmbH</a></strong> and based in 🌁 Berlin. I am mostly working with various data related project inclduing building data platform to data warehouse.</p>
 <p><a href="https://mk-hasan.github.io"><img src="https://img.shields.io/badge/mk--hasan.github.io-Data%20Nerd-green?style=flat-square&amp;labelColor=4E69C8&amp;logo=Firefox&amp;link=https://stanleylim.me" alt="Website Badge"></a> <a href="https://www.linkedin.com/in/md-kamrul-hasan-824a06a4/"><img src="https://img.shields.io/badge/mk--hasan-LinkedIn-blue&amp;labelColor=0077B5&amp;logo=LinkedIn&amp;link=https://www.linkedin.com/in/md-kamrul-hasan-824a06a4/" alt="LinkedIn Badge"></a></p>
 <p>🍌 Don't forget to get some Potassium 🍌</p>
 <img align="right" src="https://media1.giphy.com/media/13HgwGsXF0aiGY/giphy.gif" />
 <h2>⚡️ A Few Quick Facts</h2>
 <ul>
-<li>🔭 I’m currently working on <a href="https://github.com/mk-hasan/yougov-brandindex-python-client">YouGov API Client</a>.</li>
 <li>🧐 Learning about <strong>serverless architectures</strong>, <strong>distributed systems</strong>, and a bit of <strong>ML</strong>.</li>
 <li>👨‍💻 Most of my projects are available on <a href="https://github.com/mk-hasan">Github</a>.</li>
 <li>📝 I <del>regulary</del> write articles on <a href="https://mk-hasan.github.io">my blog</a>.</li>
